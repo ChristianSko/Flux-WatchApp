@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Flux2App: App {
+    
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
