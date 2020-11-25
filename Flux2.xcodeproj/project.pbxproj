@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D60F7957256F14DC00B6C15B /* Flux2 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D60F795C256F14DD00B6C15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F795B256F14DD00B6C15B /* Assets.xcassets */; };
+		D60F7963256F14DD00B6C15B /* Flux2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D60F7968256F14DD00B6C15B /* Flux2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7967256F14DD00B6C15B /* Flux2App.swift */; };
+		D60F796A256F14DD00B6C15B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7969256F14DD00B6C15B /* ContentView.swift */; };
+		D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F796B256F14DD00B6C15B /* NotificationController.swift */; };
+		D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F796D256F14DD00B6C15B /* NotificationView.swift */; };
+		D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F796F256F14DD00B6C15B /* ComplicationController.swift */; };
+		D60F7972256F14DE00B6C15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F7971256F14DE00B6C15B /* Assets.xcassets */; };
+		D60F7975256F14DE00B6C15B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F7974256F14DE00B6C15B /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D60F7958256F14DC00B6C15B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D60F794C256F14DC00B6C15B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D60F7955256F14DC00B6C15B;
+			remoteInfo = "Flux2 WatchKit App";
+		};
+		D60F7964256F14DD00B6C15B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D60F794C256F14DC00B6C15B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D60F7961256F14DD00B6C15B;
+			remoteInfo = "Flux2 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D60F797D256F14DE00B6C15B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D60F7963256F14DD00B6C15B /* Flux2 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60F7981256F14DE00B6C15B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D60F7957256F14DC00B6C15B /* Flux2 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D60F7952256F14DC00B6C15B /* Flux2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flux2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flux2 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60F795B256F14DD00B6C15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D60F795D256F14DD00B6C15B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Flux2 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60F7967256F14DD00B6C15B /* Flux2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flux2App.swift; sourceTree = "<group>"; };
+		D60F7969256F14DD00B6C15B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D60F796B256F14DD00B6C15B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D60F796D256F14DD00B6C15B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		D60F796F256F14DD00B6C15B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D60F7971256F14DE00B6C15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D60F7974256F14DE00B6C15B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D60F7976256F14DE00B6C15B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60F7977256F14DE00B6C15B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D60F795F256F14DD00B6C15B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D60F794B256F14DC00B6C15B = {
+			isa = PBXGroup;
+			children = (
+				D60F795A256F14DC00B6C15B /* Flux2 WatchKit App */,
+				D60F7966256F14DD00B6C15B /* Flux2 WatchKit Extension */,
+				D60F7953256F14DC00B6C15B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D60F7953256F14DC00B6C15B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D60F7952256F14DC00B6C15B /* Flux2.app */,
+				D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */,
+				D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D60F795A256F14DC00B6C15B /* Flux2 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D60F795B256F14DD00B6C15B /* Assets.xcassets */,
+				D60F795D256F14DD00B6C15B /* Info.plist */,
+			);
+			path = "Flux2 WatchKit App";
+			sourceTree = "<group>";
+		};
+		D60F7966256F14DD00B6C15B /* Flux2 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D60F7967256F14DD00B6C15B /* Flux2App.swift */,
+				D60F7969256F14DD00B6C15B /* ContentView.swift */,
+				D60F796B256F14DD00B6C15B /* NotificationController.swift */,
+				D60F796D256F14DD00B6C15B /* NotificationView.swift */,
+				D60F796F256F14DD00B6C15B /* ComplicationController.swift */,
+				D60F7971256F14DE00B6C15B /* Assets.xcassets */,
+				D60F7976256F14DE00B6C15B /* Info.plist */,
+				D60F7977256F14DE00B6C15B /* PushNotificationPayload.apns */,
+				D60F7973256F14DE00B6C15B /* Preview Content */,
+			);
+			path = "Flux2 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D60F7973256F14DE00B6C15B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D60F7974256F14DE00B6C15B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D60F7951256F14DC00B6C15B /* Flux2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60F7982256F14DE00B6C15B /* Build configuration list for PBXNativeTarget "Flux2" */;
+			buildPhases = (
+				D60F7950256F14DC00B6C15B /* Resources */,
+				D60F7981256F14DE00B6C15B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D60F7959256F14DC00B6C15B /* PBXTargetDependency */,
+			);
+			name = Flux2;
+			productName = Flux2;
+			productReference = D60F7952256F14DC00B6C15B /* Flux2.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D60F7955256F14DC00B6C15B /* Flux2 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60F797E256F14DE00B6C15B /* Build configuration list for PBXNativeTarget "Flux2 WatchKit App" */;
+			buildPhases = (
+				D60F7954256F14DC00B6C15B /* Resources */,
+				D60F797D256F14DE00B6C15B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D60F7965256F14DD00B6C15B /* PBXTargetDependency */,
+			);
+			name = "Flux2 WatchKit App";
+			productName = "Flux2 WatchKit App";
+			productReference = D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D60F7961256F14DD00B6C15B /* Flux2 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D60F797A256F14DE00B6C15B /* Build configuration list for PBXNativeTarget "Flux2 WatchKit Extension" */;
+			buildPhases = (
+				D60F795E256F14DD00B6C15B /* Sources */,
+				D60F795F256F14DD00B6C15B /* Frameworks */,
+				D60F7960256F14DD00B6C15B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flux2 WatchKit Extension";
+			productName = "Flux2 WatchKit Extension";
+			productReference = D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D60F794C256F14DC00B6C15B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					D60F7951256F14DC00B6C15B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D60F7955256F14DC00B6C15B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D60F7961256F14DD00B6C15B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = D60F794F256F14DC00B6C15B /* Build configuration list for PBXProject "Flux2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D60F794B256F14DC00B6C15B;
+			productRefGroup = D60F7953256F14DC00B6C15B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D60F7951256F14DC00B6C15B /* Flux2 */,
+				D60F7955256F14DC00B6C15B /* Flux2 WatchKit App */,
+				D60F7961256F14DD00B6C15B /* Flux2 WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D60F7950256F14DC00B6C15B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60F7954256F14DC00B6C15B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60F795C256F14DD00B6C15B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D60F7960256F14DD00B6C15B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60F7975256F14DE00B6C15B /* Preview Assets.xcassets in Resources */,
+				D60F7972256F14DE00B6C15B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D60F795E256F14DD00B6C15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */,
+				D60F796A256F14DD00B6C15B /* ContentView.swift in Sources */,
+				D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */,
+				D60F7968256F14DD00B6C15B /* Flux2App.swift in Sources */,
+				D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D60F7959256F14DC00B6C15B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D60F7955256F14DC00B6C15B /* Flux2 WatchKit App */;
+			targetProxy = D60F7958256F14DC00B6C15B /* PBXContainerItemProxy */;
+		};
+		D60F7965256F14DD00B6C15B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D60F7961256F14DD00B6C15B /* Flux2 WatchKit Extension */;
+			targetProxy = D60F7964256F14DD00B6C15B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D60F7978256F14DE00B6C15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D60F7979256F14DE00B6C15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D60F797B256F14DE00B6C15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Flux2 WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = U68AWG975G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Flux2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cskorobogatow.Flux2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		D60F797C256F14DE00B6C15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Flux2 WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = U68AWG975G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Flux2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cskorobogatow.Flux2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		D60F797F256F14DE00B6C15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U68AWG975G;
+				IBSC_MODULE = Flux2_WatchKit_Extension;
+				INFOPLIST_FILE = "Flux2 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = cskorobogatow.Flux2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		D60F7980256F14DE00B6C15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U68AWG975G;
+				IBSC_MODULE = Flux2_WatchKit_Extension;
+				INFOPLIST_FILE = "Flux2 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = cskorobogatow.Flux2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		D60F7983256F14DE00B6C15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U68AWG975G;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cskorobogatow.Flux2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D60F7984256F14DE00B6C15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U68AWG975G;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cskorobogatow.Flux2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D60F794F256F14DC00B6C15B /* Build configuration list for PBXProject "Flux2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60F7978256F14DE00B6C15B /* Debug */,
+				D60F7979256F14DE00B6C15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60F797A256F14DE00B6C15B /* Build configuration list for PBXNativeTarget "Flux2 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60F797B256F14DE00B6C15B /* Debug */,
+				D60F797C256F14DE00B6C15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60F797E256F14DE00B6C15B /* Build configuration list for PBXNativeTarget "Flux2 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60F797F256F14DE00B6C15B /* Debug */,
+				D60F7980256F14DE00B6C15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D60F7982256F14DE00B6C15B /* Build configuration list for PBXNativeTarget "Flux2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D60F7983256F14DE00B6C15B /* Debug */,
+				D60F7984256F14DE00B6C15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D60F794C256F14DC00B6C15B /* Project object */;
+}
