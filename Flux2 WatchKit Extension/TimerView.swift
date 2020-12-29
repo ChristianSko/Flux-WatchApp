@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimerView: View {
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     @State var currentCycle = 1
     @State var totalCyles: Int
@@ -30,14 +31,17 @@ struct TimerView: View {
             Spacer()
             
             Button(action: {
-                //self.mode.wrappedValue.dismiss()
-                print(session)
+                self.session = 0
+                self.mode.wrappedValue.dismiss()
+                
             }) {
                 Text("Stop")
             }
             .background(Color.blue)
             .cornerRadius(30)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("Timer")
         .onAppear(){
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
                 if self.session > 0 {
@@ -47,7 +51,7 @@ struct TimerView: View {
                     if self.session == 0 {
                         print("Timer reached 0")
                        // UserDefaults.standard.set(self.focusedTime, forKey: "Focused")
-                       // self.mode.wrappedValue.dismiss()
+                       self.mode.wrappedValue.dismiss()
                     }
                 }
             }
