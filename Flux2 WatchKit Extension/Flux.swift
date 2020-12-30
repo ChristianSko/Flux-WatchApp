@@ -8,16 +8,16 @@
 import SwiftUI
 
 @main
-struct Flux2App: App {
-    
-    
+struct Flux: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                SessioView()
+                TabView{
+                    SessioView()
+                    RingView(ringWidth: 15, percent: 100, backgroundColor: .blue, foregroundColors: [.white, .blue])
+                }
             }
         }
-
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

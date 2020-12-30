@@ -10,7 +10,7 @@
 		D60F7957256F14DC00B6C15B /* Flux2 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D60F795C256F14DD00B6C15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F795B256F14DD00B6C15B /* Assets.xcassets */; };
 		D60F7963256F14DD00B6C15B /* Flux2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D60F7968256F14DD00B6C15B /* Flux2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7967256F14DD00B6C15B /* Flux2App.swift */; };
+		D60F7968256F14DD00B6C15B /* Flux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7967256F14DD00B6C15B /* Flux.swift */; };
 		D60F796A256F14DD00B6C15B /* SessioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7969256F14DD00B6C15B /* SessioView.swift */; };
 		D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F796B256F14DD00B6C15B /* NotificationController.swift */; };
 		D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F796D256F14DD00B6C15B /* NotificationView.swift */; };
@@ -20,6 +20,7 @@
 		D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7988256F15ED00B6C15B /* TimerView.swift */; };
 		D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690404A257E4DC1008B0C77 /* SetGoalView.swift */; };
 		D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */; };
+		D6950D80259CE03000CA1307 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D7F259CE03000CA1307 /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +71,7 @@
 		D60F795B256F14DD00B6C15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60F795D256F14DD00B6C15B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Flux2 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D60F7967256F14DD00B6C15B /* Flux2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flux2App.swift; sourceTree = "<group>"; };
+		D60F7967256F14DD00B6C15B /* Flux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flux.swift; sourceTree = "<group>"; };
 		D60F7969256F14DD00B6C15B /* SessioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessioView.swift; sourceTree = "<group>"; };
 		D60F796B256F14DD00B6C15B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D60F796D256F14DD00B6C15B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		D60F7988256F15ED00B6C15B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		D690404A257E4DC1008B0C77 /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
 		D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextStyle.swift; sourceTree = "<group>"; };
+		D6950D7F259CE03000CA1307 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,8 @@
 		D60F7966256F14DD00B6C15B /* Flux2 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D60F7967256F14DD00B6C15B /* Flux2App.swift */,
+				D60F7967256F14DD00B6C15B /* Flux.swift */,
+				D6950D7F259CE03000CA1307 /* RingView.swift */,
 				D690404A257E4DC1008B0C77 /* SetGoalView.swift */,
 				D60F7988256F15ED00B6C15B /* TimerView.swift */,
 				D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */,
@@ -279,9 +282,10 @@
 				D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */,
 				D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */,
 				D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */,
+				D6950D80259CE03000CA1307 /* RingView.swift in Sources */,
 				D60F796A256F14DD00B6C15B /* SessioView.swift in Sources */,
 				D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */,
-				D60F7968256F14DD00B6C15B /* Flux2App.swift in Sources */,
+				D60F7968256F14DD00B6C15B /* Flux.swift in Sources */,
 				D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */,
 				D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */,
 			);
