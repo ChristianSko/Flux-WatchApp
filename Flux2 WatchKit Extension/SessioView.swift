@@ -117,9 +117,11 @@ struct ButtonView: View {
     
 
     var body: some View {
-        HStack{
+        HStack(){
             Image(systemName: imageName)
             Text(buttonName)
+                .font(.body)
+            Spacer()
         }
     }
 }
