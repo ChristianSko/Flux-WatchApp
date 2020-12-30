@@ -19,6 +19,7 @@
 		D60F7975256F14DE00B6C15B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F7974256F14DE00B6C15B /* Preview Assets.xcassets */; };
 		D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7988256F15ED00B6C15B /* TimerView.swift */; };
 		D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690404A257E4DC1008B0C77 /* SetGoalView.swift */; };
+		D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		D60F7977256F14DE00B6C15B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D60F7988256F15ED00B6C15B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		D690404A257E4DC1008B0C77 /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
+		D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				D60F7967256F14DD00B6C15B /* Flux2App.swift */,
 				D690404A257E4DC1008B0C77 /* SetGoalView.swift */,
 				D60F7988256F15ED00B6C15B /* TimerView.swift */,
+				D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */,
 				D60F796B256F14DD00B6C15B /* NotificationController.swift */,
 				D60F7969256F14DD00B6C15B /* SessioView.swift */,
 				D60F796D256F14DD00B6C15B /* NotificationView.swift */,
@@ -275,6 +278,7 @@
 			files = (
 				D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */,
 				D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */,
+				D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */,
 				D60F796A256F14DD00B6C15B /* SessioView.swift in Sources */,
 				D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */,
 				D60F7968256F14DD00B6C15B /* Flux2App.swift in Sources */,

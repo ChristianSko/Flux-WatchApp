@@ -35,7 +35,7 @@ struct TimerView: View {
                 self.mode.wrappedValue.dismiss()
                 
             }) {
-                Text("Stop")
+                ButtonTextStyle(title: "Stop")
             }
             .background(Color.blue)
             .cornerRadius(30)
