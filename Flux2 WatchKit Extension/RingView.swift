@@ -130,10 +130,11 @@ struct RingView: View {
                 }
                 
                 VStack{
-            
+                    
                     Text("\(Int(percentageTime))%")
                         .font(.system(.body,design: .rounded))
                         .fontWeight(.light)
+                    
                     
                     Text("Focus")
                         .font(.system(.body,design: .rounded))

@@ -11,14 +11,11 @@ struct SessioView: View {
     @State var sessionMinutes = 25
     @State var cycles: Double = 2
     
-    
     //Sheets go here
     @State var showSetGoalView = false
     
     let sessionTypes = [25, 45]
     let myButtonCornerRadius: CGFloat = 13
-    
-    
     
     var body: some View {
         ScrollView{
@@ -40,12 +37,6 @@ struct SessioView: View {
                 }
             }
             VStack{
-                Button(action: {
-                }, label: {
-                    ButtonView(buttonName: "Personalize",
-                               imageName: "timer")
-                })
-                .cornerRadius(myButtonCornerRadius)
                 
                 Button(action: {
                     self.showSetGoalView.toggle()
@@ -58,14 +49,20 @@ struct SessioView: View {
                     SetGoalView()
                 })
                 
-                Button(action: {
-                    
-                    
-                }, label: {
-                    ButtonView(buttonName: "Weekly Summary",
-                               imageName: "calendar.circle")
-                })
-                .cornerRadius(myButtonCornerRadius)
+//                Button(action: {
+//
+//                }, label: {
+//                    ButtonView(buttonName: "Weekly Summary",
+//                               imageName: "calendar.circle")
+//                })
+//                .cornerRadius(myButtonCornerRadius)
+//
+//                Button(action: {
+//                }, label: {
+//                    ButtonView(buttonName: "Personalize",
+//                               imageName: "timer")
+//                })
+//                .cornerRadius(myButtonCornerRadius)
             }
         }
         .navigationBarTitle("Session")
@@ -121,7 +118,7 @@ struct ButtonView: View {
             Image(systemName: imageName)
             Text(buttonName)
                 .font(.body)
-            Spacer()
+           // Spacer()
         }
     }
 }
