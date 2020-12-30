@@ -14,14 +14,14 @@ struct TimerView: View {
     @State var currentCycle = 1
     @State var totalCyles: Int
     @State var session: Int
-    @State var completedSession: Int
+    @State var completedSessionTime: Int
     
     var body: some View {
         VStack{
             
             Spacer()
             
-            Text("\(currentCycle)/\(totalCyles)")
+            Text("Session \(currentCycle) of \(totalCyles)")
             
             Text("\(timeToString2(time: TimeInterval(session)))")
                 .font(Font.monospacedDigit(.system(size: 50))())
@@ -47,7 +47,7 @@ struct TimerView: View {
                 if self.session > 0 {
                     self.session -= 1
                     print(session)
-                    print(completedSession)
+                    print(completedSessionTime)
                     if self.session == 0 {
                         print("Timer reached 0")
                        // UserDefaults.standard.set(self.focusedTime, forKey: "Focused")
@@ -94,6 +94,6 @@ func timeToString2(time: TimeInterval) -> String {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(totalCyles: 1, session: 20, completedSession: 25)
+        TimerView(totalCyles: 1, session: 20, completedSessionTime: 25)
     }
 }
