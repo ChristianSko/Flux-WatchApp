@@ -23,8 +23,8 @@ struct TimerView: View {
             
             Spacer()
             
-            //Text("Session \(currentCycle) of \(totalCyles)")
-            Text(" Now its \(focusedTime)")
+            Text("Session \(currentCycle) out of \(totalCyles)")
+            
             
             Text("\(timeToString2(time: TimeInterval(session)))")
                 .font(Font.monospacedDigit(.system(size: 50))())
@@ -60,15 +60,24 @@ struct TimerView: View {
             }
         }
         .onChange(of: scenePhase) { phase in
-            switch phase {
             
+            let timestamp = NSDate().timeIntervalSince1970
+            let myTimeInterval = TimeInterval(timestamp)
+            let time = NSDate(timeIntervalSince1970: TimeInterval(myTimeInterval))
+            
+            switch phase {
+
             case .active:
-                print("Active")
-                
+                print("your code is here on scene become Active")
+
             case .inactive:
                 print(">> your code is here on scene become inactive")
+            
+                print(time)
+                
             case .background:
                 print(">> your code is here on scene go background")
+                
             default:
                 print(">> do something else in future")
             }
