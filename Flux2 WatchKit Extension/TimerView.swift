@@ -16,12 +16,15 @@ struct TimerView: View {
     @State var session: Int
     @State var completedSessionTime: Int
     
+    @AppStorage("Focused") private var focusedTime = UserDefaults.standard.double(forKey: "Focused")
+    
     var body: some View {
         VStack{
             
             Spacer()
             
-            Text("Session \(currentCycle) of \(totalCyles)")
+            //Text("Session \(currentCycle) of \(totalCyles)")
+            Text(" Now its \(focusedTime)")
             
             Text("\(timeToString2(time: TimeInterval(session)))")
                 .font(Font.monospacedDigit(.system(size: 50))())
@@ -50,7 +53,7 @@ struct TimerView: View {
                     print(completedSessionTime)
                     if self.session == 0 {
                         print("Timer reached 0")
-                       // UserDefaults.standard.set(self.focusedTime, forKey: "Focused")
+                        self.focusedTime += Double(self.completedSessionTime)
                        self.mode.wrappedValue.dismiss()
                     }
                 }

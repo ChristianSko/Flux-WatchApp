@@ -72,7 +72,7 @@ struct SetGoalView: View {
                 self.mode.wrappedValue.dismiss()
                 
             }) {
-                ButtonTextStyle(title: "Stop")
+            ButtonTextStyle(title: "Update")
             }
             .background(Color.blue)
             .cornerRadius(50)
