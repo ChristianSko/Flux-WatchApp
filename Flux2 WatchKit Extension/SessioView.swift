@@ -24,7 +24,7 @@ struct SessioView: View {
                     VStack{
                         ForEach(0..<3) { number in
                             NavigationLink(destination: TimerView(totalCyles: Int(pow(cycles, Double(number))), session: sessionTypes[sessions] * 60, completedSessionTime: sessionTypes[sessions])) {
-                                SessionButton(sessionCycles: Int(pow(cycles, Double(number))), sessionTime: sessionTypes[sessions], timeType: "MIN")
+                                SessionButton(sessionCycles: Int(pow(cycles, Double(number))), sessionTime: sessionTypes[sessions], timeType: "Min")
                             }
                             .background(Color.black)
                             .frame(width: 68, height: 68, alignment: .center)
