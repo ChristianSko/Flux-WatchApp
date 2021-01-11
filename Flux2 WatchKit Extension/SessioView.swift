@@ -91,12 +91,11 @@ struct SessionButton: View {
                     .padding(.bottom, -7.0)
                 
                 Text("\(sessionTime)")
-                    .font(.system(size: 30, design: .rounded))
-                    .fontWeight(.bold)
+                    .font(.system(size: 28, design: .rounded))
+                    .fontWeight(.semibold)
                     .foregroundColor(.blue)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(1)
                     .frame(width: 85, height: 30, alignment: .center)
+                
                 
                 Text(timeType)
                     .fontWeight(.light)
