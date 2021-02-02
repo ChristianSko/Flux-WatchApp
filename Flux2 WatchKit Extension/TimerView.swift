@@ -69,11 +69,16 @@ struct TimerView: View {
 
             case .active:
                 print("your code is here on scene become Active")
+                
+    
 
             case .inactive:
                 print(">> your code is here on scene become inactive")
-            
+                print(timestamp)
+                print(myTimeInterval)
                 print(time)
+                
+                var timestamp1 = timestamp
                 
             case .background:
                 print(">> your code is here on scene go background")
