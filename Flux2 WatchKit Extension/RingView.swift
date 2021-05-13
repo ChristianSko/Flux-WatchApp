@@ -56,8 +56,8 @@ struct RingShape: Shape {
 
 struct RingView: View {
     
-    @AppStorage("Focused") var achievedTime: Double = UserDefaults.standard.double(forKey: "Focused")
-    @AppStorage("Goal") var objectiveTime = UserDefaults.standard.double(forKey: "Goal")
+    @AppStorage(UserdefaultKeys.focused) var achievedTime: Double = UserDefaults.standard.double(forKey: UserdefaultKeys.focused)
+    @AppStorage(UserdefaultKeys.goal) var objectiveTime = UserDefaults.standard.double(forKey: UserdefaultKeys.goal)
     @State var percentageTime: Double = 0
 
     

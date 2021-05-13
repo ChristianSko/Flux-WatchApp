@@ -37,12 +37,19 @@ struct SessioView: View {
                 }
             }
             VStack{
+                Button(action: {
+                }, label: {
+                    ButtonView(buttonName: "Personalize",
+                               imageName: SFSymbols.hourglass)
+                })
+                .cornerRadius(myButtonCornerRadius)
+                
                 
                 Button(action: {
                     self.showSetGoalView.toggle()
                 }, label: {
                     ButtonView(buttonName: "Change Goal",
-                               imageName: "arrow.up.arrow.down.circle")
+                               imageName: SFSymbols.downUpArrows)
                 })
                 .cornerRadius(myButtonCornerRadius)
                 .sheet(isPresented: $showSetGoalView, content: {
@@ -50,20 +57,14 @@ struct SessioView: View {
                 })
 //Mark: - Future Feature 
                 
-//                Button(action: {
-//
-//                }, label: {
-//                    ButtonView(buttonName: "Weekly Summary",
-//                               imageName: "calendar.circle")
-//                })
-//                .cornerRadius(myButtonCornerRadius)
-//
-//                Button(action: {
-//                }, label: {
-//                    ButtonView(buttonName: "Personalize",
-//                               imageName: "timer")
-//                })
-//                .cornerRadius(myButtonCornerRadius)
+                Button(action: {
+
+                }, label: {
+                    ButtonView(buttonName: "Weekly Summary",
+                               imageName: SFSymbols.weeklyCalendar)
+                })
+                .cornerRadius(myButtonCornerRadius)
+
             }
         }
         .navigationBarTitle("Session")
@@ -73,7 +74,7 @@ struct SessioView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SessioView()
+        SessioView(sessionMinutes: 1, cycles: 2, showSetGoalView: false)
     }
 }
 
@@ -118,7 +119,9 @@ struct ButtonView: View {
             Image(systemName: imageName)
             Text(buttonName)
                 .font(.body)
-           // Spacer()
+                .multilineTextAlignment(.leading)
+                
+           Spacer()
         }
     }
 }

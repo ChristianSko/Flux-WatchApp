@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SetGoalView: View {
     
-    @State var goalTime = UserDefaults.standard.double(forKey: "Goal")
+    @State var goalTime = UserDefaults.standard.double(forKey: UserdefaultKeys.goal)
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
@@ -28,7 +28,7 @@ struct SetGoalView: View {
                             print(goalTime)
                          }
                     }) {
-                        changeAmountButtonView(imageName: "minus")
+                        changeAmountButtonView(imageName: SFSymbols.minus)
                     }
                     .frame(width: 35, height: 35, alignment: .center)
                     .background(Color.blue)
@@ -53,7 +53,7 @@ struct SetGoalView: View {
                             print(goalTime)
                         }
                     }) {
-                        changeAmountButtonView(imageName: "plus")
+                        changeAmountButtonView(imageName: SFSymbols.plus)
                     }
                     .frame(width: 35, height: 35, alignment: .center)
                     .background(Color.blue)
@@ -68,7 +68,7 @@ struct SetGoalView: View {
             }
             
             Button(action: {
-                UserDefaults.standard.set(self.goalTime, forKey: "Goal")
+                UserDefaults.standard.set(self.goalTime, forKey: UserdefaultKeys.goal)
                 self.mode.wrappedValue.dismiss()
                 
             }) {
