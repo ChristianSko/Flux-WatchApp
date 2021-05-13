@@ -115,6 +115,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D607DC9C264DCB4600DA87AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D607DC9D264DCB4F00DA87AD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D60F796D256F14DD00B6C15B /* NotificationView.swift */,
+				D60F7969256F14DD00B6C15B /* SessionView.swift */,
+				D60F7988256F15ED00B6C15B /* TimerView.swift */,
+				D6950D7F259CE03000CA1307 /* RingView.swift */,
+				D690404A257E4DC1008B0C77 /* SetGoalView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		D60F794B256F14DC00B6C15B = {
 			isa = PBXGroup;
 			children = (
@@ -148,17 +168,13 @@
 			children = (
 				D60F7967256F14DD00B6C15B /* Flux.swift */,
 				AA76D102264D43030028FE9A /* Utilities */,
-				D6950D7F259CE03000CA1307 /* RingView.swift */,
-				D690404A257E4DC1008B0C77 /* SetGoalView.swift */,
-				D60F7988256F15ED00B6C15B /* TimerView.swift */,
-				D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */,
-				D60F796B256F14DD00B6C15B /* NotificationController.swift */,
-				D60F7969256F14DD00B6C15B /* SessionView.swift */,
-				D60F796D256F14DD00B6C15B /* NotificationView.swift */,
-				D60F796F256F14DD00B6C15B /* ComplicationController.swift */,
+				D607DC9C264DCB4600DA87AD /* Views */,
+				D607DC9D264DCB4F00DA87AD /* Screens */,
 				D60F7971256F14DE00B6C15B /* Assets.xcassets */,
 				D60F7976256F14DE00B6C15B /* Info.plist */,
 				D60F7977256F14DE00B6C15B /* PushNotificationPayload.apns */,
+				D60F796B256F14DD00B6C15B /* NotificationController.swift */,
+				D60F796F256F14DD00B6C15B /* ComplicationController.swift */,
 				D60F7973256F14DE00B6C15B /* Preview Content */,
 			);
 			path = "Flux2 WatchKit Extension";
