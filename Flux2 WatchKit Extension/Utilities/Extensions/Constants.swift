@@ -5,7 +5,7 @@
 //  Created by Christian Skorobogatow on 13/5/21.
 //
 
-import Foundation
+import UIKit
 
 enum UserdefaultKeys {
     static let goal     = "Goal"

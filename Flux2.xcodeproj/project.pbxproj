@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA76D105264D433E0028FE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76D104264D433E0028FE9A /* Constants.swift */; };
+		D607DC9F264DCEFD00DA87AD /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607DC9E264DCEFD00DA87AD /* Color+Ext.swift */; };
 		D60F7957256F14DC00B6C15B /* Flux2 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D60F795C256F14DD00B6C15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F795B256F14DD00B6C15B /* Assets.xcassets */; };
 		D60F7963256F14DD00B6C15B /* Flux2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		AA76D104264D433E0028FE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D607DC9E264DCEFD00DA87AD /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		D60F7952256F14DC00B6C15B /* Flux2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flux2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flux2 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60F795B256F14DD00B6C15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AA76D104264D433E0028FE9A /* Constants.swift */,
+				D607DC9E264DCEFD00DA87AD /* Color+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				D60F796A256F14DD00B6C15B /* SessionView.swift in Sources */,
 				D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */,
 				AA76D105264D433E0028FE9A /* Constants.swift in Sources */,
+				D607DC9F264DCEFD00DA87AD /* Color+Ext.swift in Sources */,
 				D60F7968256F14DD00B6C15B /* Flux.swift in Sources */,
 				D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */,
 				D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */,
