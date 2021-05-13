@@ -76,10 +76,7 @@ struct SetGoalView: View {
             }
             .background(Color.blue)
             .cornerRadius(50)
-            
-            
         }
-        
     }
 }
 

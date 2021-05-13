@@ -11,7 +11,7 @@ import SwiftUI
 @main
 struct Flux: App {
 
-    
+    // Test
     @Environment(\.scenePhase) private var GeneralscenePhase
     
     @SceneBuilder var body: some Scene {
@@ -35,9 +35,9 @@ struct Flux: App {
                 print("your code is here on scene become Active")
 
             case .inactive:
-                print(">> GeneralscenePhase your code is here on scene become inactive")
+                print(">> Generalscene Phase your code is here on scene become inactive")
             
-                print(Date())
+                print(time)
                 
             case .background:
                 print(">> GeneralscenePhaseyour code is here on scene go background")
