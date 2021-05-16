@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct TimerView: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -18,6 +19,9 @@ struct TimerView: View {
     
     
     @StateObject var timerViewModel = TimerManager()
+    @State private var notificationDate: Date = Date()
+    
+    
     @AppStorage(UserdefaultKeys.focused) private var focusedTime = UserDefaults.standard.double(forKey: UserdefaultKeys.focused)
     
     var body: some View {
@@ -47,20 +51,34 @@ struct TimerView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("Timer")
+        .onAppear(perform: requestPermission)
         .onAppear(){
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                if self.session > 0 {
-                    self.session -= 1
-                    print(session)
-                    print(completedSessionTime)
-                    if self.session == 0 {
-                        print("Timer reached 0")
-                        self.focusedTime += Double(self.completedSessionTime)
-                       self.mode.wrappedValue.dismiss()
-                    }
-                }
-            }
+            
+            
+            
+            //            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            //                if self.session > 0 {
+            //                    self.session -= 1
+            //                    print(session)
+            //                    print(completedSessionTime)
+            //                    if self.session == 0 {
+            //                        print("Timer reached 0")
+            //                        self.focusedTime += Double(self.completedSessionTime)
+            //                       self.mode.wrappedValue.dismiss()
+            //                    }
+            //                }
+            //            }
         }
+        .onReceive(NotificationCenter.default.publisher(
+                            for: WKExtension.applicationWillResignActiveNotification
+                )) { _ in
+                    movingToBackground()
+                }
+        .onReceive(NotificationCenter.default.publisher(
+                            for: WKExtension.applicationDidBecomeActiveNotification
+                )) { _ in
+                    movingToForeground()
+                }
         .onChange(of: scenePhase) { phase in
             
             let timestamp = NSDate().timeIntervalSince1970
@@ -68,19 +86,12 @@ struct TimerView: View {
             let time = NSDate(timeIntervalSince1970: TimeInterval(myTimeInterval))
             
             switch phase {
-
+            
             case .active:
                 print("your code is here on scene become Active")
                 
-    
-
             case .inactive:
                 print(">> your code is here on scene become inactive")
-                print(timestamp)
-                print(myTimeInterval)
-                print(time)
-                
-                var timestamp1 = timestamp
                 
             case .background:
                 print(">> your code is here on scene go background")
@@ -91,6 +102,30 @@ struct TimerView: View {
         }
         
     }
+    
+    func requestPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    func movingToBackground() {
+        print("Moving to the background")
+        notificationDate = Date()
+        timerViewModel.pause()
+    }
+    
+    func movingToForeground() {
+        print("Moving to the foreground")
+        let deltaTime: Int = Int(Date().timeIntervalSince(notificationDate))
+        timerViewModel.secondsElapsed += deltaTime
+        timerViewModel.start()
+    }
 }
 
 
@@ -100,7 +135,7 @@ func timeToString(from timeInterval: TimeInterval) -> String {
     let minutes = Int(timeInterval.truncatingRemainder(dividingBy: 60 * 60) / 60)
     
     return String(format: "%.2d:%.2d", minutes, seconds)
-
+    
 }
 
 func timeToString2(time: TimeInterval) -> String {
@@ -108,7 +143,7 @@ func timeToString2(time: TimeInterval) -> String {
     let minutes = Int(time) / 60 % 60
     let seconds = Int(time) % 60
     return String(format:"%02i:%02i",minutes, seconds)
-
+    
 }
 
 struct TimerView_Previews: PreviewProvider {

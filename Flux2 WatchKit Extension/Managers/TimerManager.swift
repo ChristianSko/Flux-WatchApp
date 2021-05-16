@@ -22,5 +22,8 @@ class TimerManager: ObservableObject {
         timer.invalidate()
         secondsElapsed = 0
     }
-
+    
+    func pause() {
+            timer.invalidate()
+        }
 }
