@@ -16,6 +16,8 @@ struct TimerView: View {
     @State var session: Int
     @State var completedSessionTime: Int
     
+    
+    @StateObject var timerViewModel = TimerManager()
     @AppStorage(UserdefaultKeys.focused) private var focusedTime = UserDefaults.standard.double(forKey: UserdefaultKeys.focused)
     
     var body: some View {
