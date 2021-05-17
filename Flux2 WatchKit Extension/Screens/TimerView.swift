@@ -42,7 +42,7 @@ struct TimerView: View {
             Button(action: {
                 self.session = 0
                 self.mode.wrappedValue.dismiss()
-                timerViewModel.stop()
+                timerViewModel.timer.invalidate()
                 
             }) {
                 ButtonTextStyle(title: "Stop")
@@ -53,6 +53,9 @@ struct TimerView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle("Timer")
         .onAppear(perform: requestPermission)
+        .onAppear(perform: {
+            timerViewModel.start()
+        })
         .onAppear(){
             
             
@@ -71,37 +74,15 @@ struct TimerView: View {
             //            }
         }
         .onReceive(NotificationCenter.default.publisher(
-                            for: WKExtension.applicationWillResignActiveNotification
-                )) { _ in
-                    movingToBackground()
-                }
-        .onReceive(NotificationCenter.default.publisher(
-                            for: WKExtension.applicationDidBecomeActiveNotification
-                )) { _ in
-                    movingToForeground()
-                }
-        .onChange(of: scenePhase) { phase in
-            
-            let timestamp = NSDate().timeIntervalSince1970
-            let myTimeInterval = TimeInterval(timestamp)
-            let time = NSDate(timeIntervalSince1970: TimeInterval(myTimeInterval))
-            
-            switch phase {
-            
-            case .active:
-                print("your code is here on scene become Active")
-                
-            case .inactive:
-                print(">> your code is here on scene become inactive")
-                
-            case .background:
-                print(">> your code is here on scene go background")
-                
-            default:
-                print(">> do something else in future")
-            }
+            for: WKExtension.applicationWillResignActiveNotification
+        )) { _ in
+            movingToBackground()
         }
-        
+        .onReceive(NotificationCenter.default.publisher(
+            for: WKExtension.applicationDidBecomeActiveNotification
+        )) { _ in
+            movingToForeground()
+        }
     }
     
     func requestPermission() {
