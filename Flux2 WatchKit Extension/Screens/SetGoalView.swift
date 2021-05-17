@@ -18,7 +18,7 @@ struct SetGoalView: View {
             Text("DAILY FOCUS GOAL")
                 .font(.system(size: 16, design: .rounded))
                 .fontWeight(.light)
-                .foregroundColor(.blue)
+                .foregroundColor(Color.brandPrimary)
             
             VStack{
                 HStack {
@@ -31,7 +31,7 @@ struct SetGoalView: View {
                         changeAmountButtonView(imageName: SFSymbols.minus)
                     }
                     .frame(width: 35, height: 35, alignment: .center)
-                    .background(Color.blue)
+                    .background(Color.brandPrimary)
                     .cornerRadius(50)
                     
                     Text("\(Int(goalTime))")
@@ -56,14 +56,14 @@ struct SetGoalView: View {
                         changeAmountButtonView(imageName: SFSymbols.plus)
                     }
                     .frame(width: 35, height: 35, alignment: .center)
-                    .background(Color.blue)
+                    .background(Color.brandPrimary)
                     .cornerRadius(50)
                 }
                 
                 Text("MINUTES")
                     .font(.system(.body, design: .rounded))
                     .fontWeight(.bold)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color.brandPrimary)
                     .padding(.top, -5.0)
             }
             
@@ -74,7 +74,7 @@ struct SetGoalView: View {
             }) {
             ButtonTextStyle(title: "Update")
             }
-            .background(Color.blue)
+            .background(Color.brandPrimary)
             .cornerRadius(50)
         }
     }
@@ -94,7 +94,7 @@ struct changeAmountButtonView: View {
             .foregroundColor(.black)
             .font(Font.body.weight(.heavy))
             .frame(width: 35, height: 35, alignment: .center)
-            .background(Color.blue)
+            .background(Color.brandPrimary)
             .cornerRadius(50)
         
     }

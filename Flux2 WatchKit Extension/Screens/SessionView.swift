@@ -95,7 +95,7 @@ struct SessionButton: View {
                 Text("\(sessionTime)")
                     .font(.system(size: 28, design: .rounded))
                     .fontWeight(.semibold)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color.brandPrimary)
                     .frame(width: 85, height: 30, alignment: .center)
                 
                 

@@ -139,7 +139,7 @@ struct RingView: View {
                     Text("Focus")
                         .font(.system(.body,design: .rounded))
                         .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.brandPrimary)
         
                     Text("\(Int(achievedTime))/\(Int(objectiveTime))Min")
                         .font(.system(.body,design: .rounded))
@@ -184,6 +184,6 @@ struct RingView: View {
 
 struct PercentageRing_Previews: PreviewProvider {
     static var previews: some View {
-        RingView(ringWidth: 15, percent: 1, backgroundColor: .blue, foregroundColors: [.white, .blue])
+        RingView(ringWidth: 15, percent: 1, backgroundColor: Color.brandPrimary, foregroundColors: [.white, Color.brandPrimary])
     }
 }

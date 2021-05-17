@@ -32,7 +32,7 @@ struct TimerView: View {
             Text("Session \(currentCycle) out of \(totalCyles)")
             
             
-            Text("\(timeToString2(time: TimeInterval(session)))")
+            Text("\(timeToString2(time: TimeInterval(timerViewModel.secondsElapsed)))")
                 .font(Font.monospacedDigit(.system(size: 50))())
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
@@ -42,11 +42,12 @@ struct TimerView: View {
             Button(action: {
                 self.session = 0
                 self.mode.wrappedValue.dismiss()
+                timerViewModel.stop()
                 
             }) {
                 ButtonTextStyle(title: "Stop")
             }
-            .background(Color.blue)
+            .background(Color.brandPrimary)
             .cornerRadius(30)
         }
         .navigationBarBackButtonHidden(true)
