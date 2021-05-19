@@ -14,7 +14,7 @@ class TimerManager: ObservableObject {
     
     func start() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.secondsElapsed += 1
+            self.secondsElapsed -= 1
         }
     }
     

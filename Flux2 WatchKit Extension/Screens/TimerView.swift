@@ -54,6 +54,7 @@ struct TimerView: View {
         .navigationBarTitle("Timer")
         .onAppear(perform: requestPermission)
         .onAppear(perform: {
+            timerViewModel.secondsElapsed = session
             timerViewModel.start()
         })
         .onAppear(){
@@ -105,7 +106,7 @@ struct TimerView: View {
     func movingToForeground() {
         print("Moving to the foreground")
         let deltaTime: Int = Int(Date().timeIntervalSince(notificationDate))
-        timerViewModel.secondsElapsed += deltaTime
+        timerViewModel.secondsElapsed -= deltaTime
         timerViewModel.start()
     }
 }
