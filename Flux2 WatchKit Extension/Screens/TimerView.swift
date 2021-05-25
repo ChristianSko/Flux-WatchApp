@@ -58,7 +58,7 @@ struct TimerView: View {
             timerViewModel.start()
         })
         .onAppear(){
-            
+            NotifyWhenFinished(timeInterval: session)
             
             
             //            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
@@ -109,6 +109,24 @@ struct TimerView: View {
         timerViewModel.secondsElapsed -= deltaTime
         timerViewModel.start()
     }
+}
+
+
+func NotifyWhenFinished(timeInterval: Int){
+    
+    let content = UNMutableNotificationContent()
+    content.title = "Focus Session Completed"
+    content.subtitle = "Break time!"
+    content.sound = UNNotificationSound.default
+    
+    // show this notification one seconds from now
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(timeInterval), repeats: false)
+    
+    // choose a random identifier
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    
+    // add the notification request
+    UNUserNotificationCenter.current().add(request)
 }
 
 

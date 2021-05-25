@@ -27,3 +27,7 @@ class TimerManager: ObservableObject {
             timer.invalidate()
         }
 }
+
+
+
+
