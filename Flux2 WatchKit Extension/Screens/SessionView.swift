@@ -13,6 +13,7 @@ struct SessioView: View {
     
     //Sheets go here
     @State var showSetGoalView = false
+    @State var showPickerView = false
     
     let sessionTypes = [25, 45]
     let myButtonCornerRadius: CGFloat = 13
@@ -38,11 +39,15 @@ struct SessioView: View {
             }
             VStack{
                 Button(action: {
+                    showPickerView.toggle()
                 }, label: {
                     ButtonView(buttonName: "Personalize",
                                imageName: SFSymbols.hourglass)
                 })
                 .cornerRadius(myButtonCornerRadius)
+                .sheet(isPresented: $showPickerView, content: {
+                    PickerView()
+                })
                 
                 
                 Button(action: {

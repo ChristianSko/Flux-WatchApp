@@ -26,7 +26,6 @@ struct TimerView: View {
     
     var body: some View {
         VStack{
-            
             Spacer()
             
             Text("Session \(currentCycle) out of \(totalCyles)")
@@ -59,20 +58,11 @@ struct TimerView: View {
         })
         .onAppear(){
             NotifyWhenFinished(timeInterval: session)
-            
-            
-            //            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            //                if self.session > 0 {
-            //                    self.session -= 1
-            //                    print(session)
-            //                    print(completedSessionTime)
-            //                    if self.session == 0 {
-            //                        print("Timer reached 0")
-            //                        self.focusedTime += Double(self.completedSessionTime)
-            //                       self.mode.wrappedValue.dismiss()
-            //                    }
-            //                }
-            //            }
+            if self.session == 0 {
+                print("Timer reached 0, Add time to ring")
+                self.focusedTime += Double(self.completedSessionTime)
+                self.mode.wrappedValue.dismiss()
+            }
         }
         .onReceive(NotificationCenter.default.publisher(
             for: WKExtension.applicationWillResignActiveNotification
