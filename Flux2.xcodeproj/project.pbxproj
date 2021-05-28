@@ -27,6 +27,7 @@
 		D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */; };
 		D6950D80259CE03000CA1307 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D7F259CE03000CA1307 /* RingView.swift */; };
 		D6C583EC2651C81500B63B5A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C583EB2651C81500B63B5A /* TimerManager.swift */; };
+		D6C7096F266199F50005AA6C /* WeeklySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7096E266199F50005AA6C /* WeeklySummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextStyle.swift; sourceTree = "<group>"; };
 		D6950D7F259CE03000CA1307 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		D6C583EB2651C81500B63B5A /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		D6C7096E266199F50005AA6C /* WeeklySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				D60F7988256F15ED00B6C15B /* TimerView.swift */,
 				D61CAFD5265EEE700017B72E /* PickerView.swift */,
 				D6950D7F259CE03000CA1307 /* RingView.swift */,
+				D6C7096E266199F50005AA6C /* WeeklySummaryView.swift */,
 				D690404A257E4DC1008B0C77 /* SetGoalView.swift */,
 			);
 			path = Screens;
@@ -365,6 +368,7 @@
 				D607DC9F264DCEFD00DA87AD /* Color+Ext.swift in Sources */,
 				D60F7968256F14DD00B6C15B /* Flux.swift in Sources */,
 				D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */,
+				D6C7096F266199F50005AA6C /* WeeklySummaryView.swift in Sources */,
 				D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */,
 				D61CAFDC265EEF210017B72E /* Picker.swift in Sources */,
 				D61CAFD6265EEE700017B72E /* PickerView.swift in Sources */,
