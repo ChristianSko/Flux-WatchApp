@@ -14,6 +14,7 @@ struct SessioView: View {
     //Sheets go here
     @State var showSetGoalView = false
     @State var showPickerView = false
+    @State var showWeeklySummary = false
     
     let sessionTypes = [25, 45]
     let myButtonCornerRadius: CGFloat = 13
@@ -63,12 +64,15 @@ struct SessioView: View {
 //Mark: - Future Feature 
                 
                 Button(action: {
-
+                    showWeeklySummary.toggle()
                 }, label: {
                     ButtonView(buttonName: "Weekly Summary",
                                imageName: SFSymbols.weeklyCalendar)
                 })
                 .cornerRadius(myButtonCornerRadius)
+                .sheet(isPresented: $showWeeklySummary, content: {
+                    WeeklySummaryView()
+                })
 
             }
         }
