@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PickerView: View {
+    @State var startTimerView = false
     
     var body: some View {
         VStack {
@@ -17,13 +18,12 @@ struct PickerView: View {
                 Text(":").padding(.horizontal, -4)
                 TimePicker(measureUnit: .minutes)
                 Text(":").padding(.horizontal, -4)
-                TimePicker(measureUnit: .seconds)
             }
             .padding(.bottom, 8)
             .edgesIgnoringSafeArea(.horizontal)
         
             Button(action: {
-                // The action to perform when the button is tapped.
+                startTimerView.toggle()
             }) {
                 Text("Start")
                     .colorInvert()
@@ -31,6 +31,11 @@ struct PickerView: View {
             .background(Color.brandPrimary)
             .cornerRadius(20)
             .padding(.vertical, 4)
+//            .sheet(isPresented: $startTimerView, content: {
+//                
+//            })
+            
+            
             Spacer()
         }
         .edgesIgnoringSafeArea(.bottom)
