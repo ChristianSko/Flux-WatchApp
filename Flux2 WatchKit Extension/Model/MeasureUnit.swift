@@ -8,42 +8,37 @@
 import Foundation
 
 
-var hour:  [String] {
-    let hourInt = Array(0...23)
+var cycles:  [String] {
+    let hourInt = Array(0...12)
     let hourString = hourInt.map { String(format:"%02d", $0) }
     return hourString
 }
 
-var minsec:  [String] {
+var mins:  [String] {
     let minsecInt = Array(0...59)
     let minsecString = minsecInt.map { String(format:"%02d", $0) }
     return minsecString
 }
 
 enum MeasureUnitType: String {
-    case hours   = "MINUTES"
-    case minutes = "SECONDS"
-    case seconds = "CYCLES"
+    case cycle   = "CYCLES"
+    case minutes = "MINUTES"
     
     var indices: Range<Int> {
         switch self {
-        case .hours:
-            return hour.indices
+        case .cycle:
+            return cycles.indices
         case .minutes:
-            return minsec.indices
-        case .seconds:
-            return minsec.indices
+            return mins.indices
         }
     }
     
     var values: [String] {
         switch self {
-        case .hours:
-            return hour
+        case .cycle:
+            return cycles
         case .minutes:
-            return minsec
-        case .seconds:
-            return minsec
+            return mins
         }
     }
 }

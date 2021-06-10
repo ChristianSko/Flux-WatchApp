@@ -69,7 +69,7 @@ struct TimePicker: View {
 
 struct TimePicker_Preview: PreviewProvider {
     static var previews: some View {
-        TimePicker(measureUnit: .hours)
+        TimePicker(measureUnit: .cycle)
             .frame(width: 60)
     }
 }

@@ -14,7 +14,7 @@ struct PickerView: View {
         VStack {
             Spacer()
             HStack {
-                TimePicker(measureUnit: .hours)
+                TimePicker(measureUnit: .cycle)
                 Text(":").padding(.horizontal, -4)
                 TimePicker(measureUnit: .minutes)
                 Text(":").padding(.horizontal, -4)
