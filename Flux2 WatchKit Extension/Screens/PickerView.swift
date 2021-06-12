@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct PickerView: View {
+    
     @State var startTimerView = false
+    @State var selectedCycle: Int = 1
+    @State var selectedMinutesAmount: Int = 1
+    
+    let cycleInt: [Int] = Array(1...12)
+    let minsInt: [Int] = Array(1...59)
     
     var body: some View {
         VStack {
             Spacer()
             HStack {
-                TimePicker(measureUnit: .cycle)
-                Text("x").padding(.horizontal, -4)
-                TimePicker(measureUnit: .minutes)
-                Text("").padding(.horizontal, -4)
+                PickerF(label: "Cycles", unit: cycleInt, selected: $selectedCycle)
+                PickerF(label: "Minutes", unit: minsInt, selected: $selectedMinutesAmount)
             }
             .padding(.bottom, 8)
             .edgesIgnoringSafeArea(.horizontal)
         
             Button(action: {
                 startTimerView.toggle()
+                print(selectedCycle)
+                print(selectedMinutesAmount * 60)
             }) {
                 Text("Start")
                     .colorInvert()
@@ -31,8 +37,11 @@ struct PickerView: View {
             .background(Color.brandPrimary)
             .cornerRadius(20)
             .padding(.vertical, 4)
+            .sheet(isPresented: $startTimerView, content: {
+                TimerView(totalCyles: selectedCycle, session: selectedMinutesAmount * 60, completedSessionTime: selectedMinutesAmount)
+            })
             
-            
+
             Spacer()
         }
         .edgesIgnoringSafeArea(.bottom)

@@ -21,11 +21,10 @@
 		D60F7975256F14DE00B6C15B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F7974256F14DE00B6C15B /* Preview Assets.xcassets */; };
 		D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7988256F15ED00B6C15B /* TimerView.swift */; };
 		D61CAFD6265EEE700017B72E /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CAFD5265EEE700017B72E /* PickerView.swift */; };
-		D61CAFD9265EEED50017B72E /* MeasureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CAFD8265EEED50017B72E /* MeasureUnit.swift */; };
-		D61CAFDC265EEF210017B72E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CAFDB265EEF210017B72E /* Picker.swift */; };
 		D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690404A257E4DC1008B0C77 /* SetGoalView.swift */; };
 		D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */; };
 		D6950D80259CE03000CA1307 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D7F259CE03000CA1307 /* RingView.swift */; };
+		D69B4AE52674CFC10013D88A /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B4AE42674CFC10013D88A /* Picker.swift */; };
 		D6C583EC2651C81500B63B5A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C583EB2651C81500B63B5A /* TimerManager.swift */; };
 		D6C7096F266199F50005AA6C /* WeeklySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7096E266199F50005AA6C /* WeeklySummaryView.swift */; };
 /* End PBXBuildFile section */
@@ -91,11 +90,10 @@
 		D60F7977256F14DE00B6C15B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		D60F7988256F15ED00B6C15B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		D61CAFD5265EEE700017B72E /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		D61CAFD8265EEED50017B72E /* MeasureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnit.swift; sourceTree = "<group>"; };
-		D61CAFDB265EEF210017B72E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		D690404A257E4DC1008B0C77 /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
 		D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextStyle.swift; sourceTree = "<group>"; };
 		D6950D7F259CE03000CA1307 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		D69B4AE42674CFC10013D88A /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		D6C583EB2651C81500B63B5A /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		D6C7096E266199F50005AA6C /* WeeklySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,7 +207,6 @@
 		D61CAFD7265EEE9E0017B72E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D61CAFD8265EEED50017B72E /* MeasureUnit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,7 +214,7 @@
 		D61CAFDA265EEF0A0017B72E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D61CAFDB265EEF210017B72E /* Picker.swift */,
+				D69B4AE42674CFC10013D88A /* Picker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				D6C583EC2651C81500B63B5A /* TimerManager.swift in Sources */,
 				D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */,
 				D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */,
-				D61CAFD9265EEED50017B72E /* MeasureUnit.swift in Sources */,
 				D6950D80259CE03000CA1307 /* RingView.swift in Sources */,
 				D60F796A256F14DD00B6C15B /* SessionView.swift in Sources */,
 				D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */,
@@ -370,7 +366,7 @@
 				D60F796E256F14DD00B6C15B /* NotificationView.swift in Sources */,
 				D6C7096F266199F50005AA6C /* WeeklySummaryView.swift in Sources */,
 				D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */,
-				D61CAFDC265EEF210017B72E /* Picker.swift in Sources */,
+				D69B4AE52674CFC10013D88A /* Picker.swift in Sources */,
 				D61CAFD6265EEE700017B72E /* PickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

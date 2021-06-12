@@ -1,42 +1,34 @@
 //
-//  Picker.swift
+//  PickerF.swift
 //  Flux2 WatchKit Extension
 //
-//  Created by Christian Skorobogatow on 26/5/21.
+//  Created by Christian Skorobogatow on 12/6/21.
 //
 
 import SwiftUI
 
-struct TimePicker: View {
-
-    var measureUnit: MeasureUnitType
+struct PickerF: View {
     
-    @State var selection = 1
+    let label: String
+    var unit: [Int]
+
+    @Binding var selected: Int
     
     var body: some View {
-        // The body of TimePicker. Interesting things take place here! ⛳️
-        Picker(selection: $selection,
-               label: Text(measureUnit.rawValue)
-
-                .font(.system(size: 10)).fontWeight(.bold)
-                .minimumScaleFactor(0.001)
-                .padding(.horizontal, 3)
-                .colorInvert().background(/*@START_MENU_TOKEN@*/Color.green/*@END_MENU_TOKEN@*/)
-                .cornerRadius(5)
-                .scaledToFill())
-        {
-            ForEach (measureUnit.indices, id:\.self) { idx in
-
-                Text(self.measureUnit.values[idx])
-            }.foregroundColor(.secondary)
+        VStack {
+            HStack {
+                Picker(label, selection: $selected) {
+                    ForEach(unit, id: \.self) {
+                        Text("\($0)")
+                    }
+                }
+            }
         }
-        .pickerStyle(WheelPickerStyle())
     }
 }
 
-struct TimePicker_Preview: PreviewProvider {
-    static var previews: some View {
-        TimePicker(measureUnit: .cycle)
-            .frame(width: 60)
-    }
-}
+//struct PickerF_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PickerF(label: "", unit: [1,2,3,4,5], selected: 1)
+//    }
+//}
