@@ -14,9 +14,9 @@ struct PickerView: View {
         VStack {
             Spacer()
             HStack {
-                Picker(measureUnit: .cycle)
+                TimePicker(measureUnit: .cycle)
                 Text("x").padding(.horizontal, -4)
-                Picker(measureUnit: .minutes)
+                TimePicker(measureUnit: .minutes)
                 Text("").padding(.horizontal, -4)
             }
             .padding(.bottom, 8)
@@ -31,10 +31,6 @@ struct PickerView: View {
             .background(Color.brandPrimary)
             .cornerRadius(20)
             .padding(.vertical, 4)
-            .sheet(isPresented: $startTimerView, content: {
-                print(Tim)
-                
-            })
             
             
             Spacer()
