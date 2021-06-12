@@ -13,7 +13,7 @@ struct ButtonTextStyle: View {
     var body: some View {
         Text(title)
             .font(.body)
-            .fontWeight(.medium)
+            .fontWeight(.light)
             .foregroundColor(.black)
             
     }
