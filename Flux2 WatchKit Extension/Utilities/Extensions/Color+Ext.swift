@@ -9,7 +9,7 @@ import SwiftUI
 
 
 extension Color {
-    static let brandPrimary = Color.red
-   
+    static let brandPrimary = Color.blue
+    static let brandSecondary = Color.red
 }
 
