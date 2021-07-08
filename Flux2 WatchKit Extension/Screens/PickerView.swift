@@ -14,7 +14,7 @@ struct PickerView: View {
     @State var selectedMinutesAmount: Int = 1
     
     let cycleInt: [Int] = Array(1...12)
-    let minsInt: [Int] = Array(1...59)
+    let minsInt: [Int] = Array(1...60)
     
     var body: some View {
         VStack {
