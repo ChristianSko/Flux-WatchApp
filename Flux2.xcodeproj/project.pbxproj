@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA76D105264D433E0028FE9A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76D104264D433E0028FE9A /* Constants.swift */; };
 		D607DC9F264DCEFD00DA87AD /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607DC9E264DCEFD00DA87AD /* Color+Ext.swift */; };
+		D60C067226DE72E500ED072C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C067126DE72E500ED072C /* NotificationManager.swift */; };
+		D60C067526DED02F00ED072C /* TimeToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C067426DED02F00ED072C /* TimeToString.swift */; };
 		D60F7957256F14DC00B6C15B /* Flux2 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D60F795C256F14DD00B6C15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60F795B256F14DD00B6C15B /* Assets.xcassets */; };
 		D60F7963256F14DD00B6C15B /* Flux2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D60F7962256F14DD00B6C15B /* Flux2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -74,6 +76,9 @@
 /* Begin PBXFileReference section */
 		AA76D104264D433E0028FE9A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D607DC9E264DCEFD00DA87AD /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		D60C067126DE72E500ED072C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		D60C067326DE734B00ED072C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D60C067426DED02F00ED072C /* TimeToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeToString.swift; sourceTree = "<group>"; };
 		D60F7952256F14DC00B6C15B /* Flux2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flux2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60F7956256F14DC00B6C15B /* Flux2 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flux2 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60F795B256F14DD00B6C15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AA76D103264D430B0028FE9A /* Extensions */,
+				D60C067426DED02F00ED072C /* TimeToString.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 		D61CAFD7265EEE9E0017B72E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D60C067326DE734B00ED072C /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C583EB2651C81500B63B5A /* TimerManager.swift */,
+				D60C067126DE72E500ED072C /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 				D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */,
 				D6950D80259CE03000CA1307 /* RingView.swift in Sources */,
 				D60F796A256F14DD00B6C15B /* SessionView.swift in Sources */,
+				D60C067226DE72E500ED072C /* NotificationManager.swift in Sources */,
 				D60F7970256F14DD00B6C15B /* ComplicationController.swift in Sources */,
 				AA76D105264D433E0028FE9A /* Constants.swift in Sources */,
 				D607DC9F264DCEFD00DA87AD /* Color+Ext.swift in Sources */,
@@ -368,6 +377,7 @@
 				D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */,
 				D69B4AE52674CFC10013D88A /* Picker.swift in Sources */,
 				D61CAFD6265EEE700017B72E /* PickerView.swift in Sources */,
+				D60C067526DED02F00ED072C /* TimeToString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
