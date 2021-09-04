@@ -44,6 +44,10 @@ class NotificationManager: ObservableObject {
         
     }
     
+    func removeScheduledNotification() {
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
+    
     
 //    func movingToBackground(timer: Int) {
 //        print("Moving to the background")
@@ -166,9 +170,9 @@ class NotificationManager: ObservableObject {
 //    }
 //  }
 //
-////  func removeScheduledNotification(task: Task) {
-////    UNUserNotificationCenter.current()
-////      .removePendingNotificationRequests(withIdentifiers: [task.id])
-////  }
+//  func removeScheduledNotification(task: Task) {
+//    UNUserNotificationCenter.current()
+//      .removePendingNotificationRequests(withIdentifiers: [task.id])
+//  }
 //
 //}

@@ -195,7 +195,6 @@
 				D60F7971256F14DE00B6C15B /* Assets.xcassets */,
 				D60F7976256F14DE00B6C15B /* Info.plist */,
 				D60F7977256F14DE00B6C15B /* PushNotificationPayload.apns */,
-				D60F796B256F14DD00B6C15B /* NotificationController.swift */,
 				D60F796F256F14DD00B6C15B /* ComplicationController.swift */,
 				D60F7973256F14DE00B6C15B /* Preview Content */,
 			);
@@ -231,6 +230,7 @@
 			children = (
 				D6C583EB2651C81500B63B5A /* TimerManager.swift */,
 				D60C067126DE72E500ED072C /* NotificationManager.swift */,
+				D60F796B256F14DD00B6C15B /* NotificationController.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";

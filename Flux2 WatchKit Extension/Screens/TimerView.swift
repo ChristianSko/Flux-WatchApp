@@ -21,7 +21,6 @@ struct TimerView: View {
     @StateObject var timerViewModel = TimerManager()
     @State private var notificationDate: Date = Date()
     
-    
     @AppStorage(UserdefaultKeys.focused) private var focusedTime = UserDefaults.standard.double(forKey: UserdefaultKeys.focused)
     
     var body: some View {
@@ -42,6 +41,7 @@ struct TimerView: View {
                 self.session = 0
                 self.mode.wrappedValue.dismiss()
                 timerViewModel.timer.invalidate()
+                NotificationManager.shared.removeScheduledNotification()
                 
             }) {
                 ButtonTextStyle(title: "Stop")
