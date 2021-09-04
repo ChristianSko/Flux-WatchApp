@@ -28,8 +28,10 @@ class NotificationManager: ObservableObject {
     func NotifyWhenFinished(timeInterval: Int){
         
         let content = UNMutableNotificationContent()
-        content.title = "Focus Session Completed"
+        content.title = "Session Completed"
+        content.body = "Good job!"
         content.subtitle = "Break time!"
+        content.categoryIdentifier = "alarm"
         content.sound = UNNotificationSound.default
         
         // show this notification one seconds from now
@@ -41,8 +43,52 @@ class NotificationManager: ObservableObject {
         // add the notification request
         UNUserNotificationCenter.current().add(request)
         
-        
     }
+    
+    func registerCategories() {
+        let center = UNUserNotificationCenter.current()
+
+        let show = UNNotificationAction(identifier: "show", title: "Go to app…", options: .foreground)
+        let startBreak = UNNotificationAction(identifier: "break", title: "Start break Timer", options: .foreground)
+        
+        let category = UNNotificationCategory(identifier: "alarm", actions: [show, startBreak], intentIdentifiers: [])
+
+        center.setNotificationCategories([category])
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // pull out the buried userInfo dictionary
+        let userInfo = response.notification.request.content.userInfo
+
+        if let customData = userInfo["customData"] as? String {
+            print("Custom data received: \(customData)")
+
+            switch response.actionIdentifier {
+            
+            case UNNotificationDefaultActionIdentifier:
+                // the user swiped to unlock
+                print("Default identifier")
+
+            case "show":
+                // the user tapped our "show more info…" button
+                print("Show more information…")
+                break
+                
+            case "break":
+                // the user tapped our "show more info…" button
+                print("Show more information…")
+                break
+
+            default:
+                break
+            }
+        }
+
+        // you must call the completion handler when you're done
+        completionHandler()
+    }
+
     
     func removeScheduledNotification() {
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
