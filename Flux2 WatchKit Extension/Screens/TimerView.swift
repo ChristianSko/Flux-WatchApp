@@ -59,9 +59,11 @@ struct TimerView: View {
         .onAppear(){
             NotificationManager.shared.NotifyWhenFinished(timeInterval: session)
             NotificationManager.shared.registerCategories()
-            if self.session == 0 {
-                print("Timer reached 0, Add time to ring")
+            
+            if self.timerViewModel.secondsElapsed == 0 {
+                print(timerViewModel.secondsElapsed)
                 self.focusedTime += Double(self.completedSessionTime)
+                timerViewModel.timer.invalidate()
                 self.mode.wrappedValue.dismiss()
             }
         }

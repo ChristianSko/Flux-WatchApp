@@ -19,7 +19,7 @@ struct Flux: App {
             NavigationView {
                 TabView{
                     SessioView()
-                    RingView(ringWidth: 15, percent: 100, backgroundColor: Color.brandPrimary, foregroundColors: [.white, Color.brandPrimary])
+                    RingView(ringWidth: 15, percent: 15, backgroundColor: Color.brandPrimary, foregroundColors: [.white, Color.brandPrimary])
                 }
             }
         }

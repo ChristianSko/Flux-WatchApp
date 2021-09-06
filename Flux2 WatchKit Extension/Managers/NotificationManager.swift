@@ -31,7 +31,7 @@ class NotificationManager: ObservableObject {
         content.title = "Session Completed"
         content.body = "Good job!"
         content.subtitle = "Break time!"
-        content.categoryIdentifier = "alarm"
+        content.categoryIdentifier = "sessionComplete"
         content.sound = UNNotificationSound.default
         
         // show this notification one seconds from now
@@ -48,10 +48,10 @@ class NotificationManager: ObservableObject {
     func registerCategories() {
         let center = UNUserNotificationCenter.current()
 
-        let show = UNNotificationAction(identifier: "show", title: "Go to app…", options: .foreground)
-        let startBreak = UNNotificationAction(identifier: "break", title: "Start break Timer", options: .foreground)
+        let show = UNNotificationAction(identifier: "show", title: "Open app", options: .foreground)
+        let startBreak = UNNotificationAction(identifier: "break", title: "Break Timer", options: .foreground)
         
-        let category = UNNotificationCategory(identifier: "alarm", actions: [show, startBreak], intentIdentifiers: [])
+        let category = UNNotificationCategory(identifier: "sessionComplete", actions: [show, startBreak], intentIdentifiers: [])
 
         center.setNotificationCategories([category])
     }

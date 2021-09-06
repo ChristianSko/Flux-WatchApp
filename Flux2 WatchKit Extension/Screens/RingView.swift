@@ -131,7 +131,7 @@ struct RingView: View {
                 
                 VStack{
                     
-                    Text("\(achievedTime/objectiveTime)%")
+                    Text("\(Int(achievedTime/objectiveTime))%")
                         .font(.system(.body,design: .rounded))
                         .fontWeight(.light)
                     

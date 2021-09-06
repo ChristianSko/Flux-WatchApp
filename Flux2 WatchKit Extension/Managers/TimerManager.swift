@@ -14,7 +14,13 @@ class TimerManager: ObservableObject {
     
     func start() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.secondsElapsed -= 1
+            if self.secondsElapsed > 0 {
+                self.secondsElapsed -= 1
+                if self.secondsElapsed == 0 {
+                    print("Timer Reached 0")
+                    self.timer.invalidate()
+                }
+            }
         }
     }
     
