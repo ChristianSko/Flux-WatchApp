@@ -54,19 +54,20 @@ struct TimerView: View {
         .onAppear(perform: NotificationManager.shared.requestPermission)
         .onAppear(perform: {
             timerViewModel.secondsElapsed = session
+            timerViewModel.sessionLength = session / 60
             timerViewModel.start()
-        })
-        .onAppear(){
+            
             NotificationManager.shared.NotifyWhenFinished(timeInterval: session)
             NotificationManager.shared.registerCategories()
             
             if self.timerViewModel.secondsElapsed == 0 {
-                print(timerViewModel.secondsElapsed)
-                self.focusedTime += Double(self.completedSessionTime)
-                timerViewModel.timer.invalidate()
                 self.mode.wrappedValue.dismiss()
-            }
+            }})
+        
+        .onReceive(timerViewModel.$secondsElapsed) { _ in
+            print(timerViewModel.secondsElapsed)
         }
+        
         .onReceive(NotificationCenter.default.publisher(
             for: WKExtension.applicationWillResignActiveNotification
         )) { _ in
@@ -89,7 +90,15 @@ struct TimerView: View {
         print("Moving to the foreground")
         let deltaTime: Int = Int(Date().timeIntervalSince(notificationDate))
         timerViewModel.secondsElapsed -= deltaTime
-        timerViewModel.start()
+        
+        // I could add logic here? Once Open app is pressed, add time to timer and maybe animation? Also change stop timer to Next?
+        
+        if timerViewModel.secondsElapsed < 0 {
+            timerViewModel.secondsElapsed = 0
+            timerViewModel.stop()
+        } else {
+            timerViewModel.start()
+        }
     }
 }
 

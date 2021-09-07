@@ -10,6 +10,8 @@ import UserNotifications
 
 class TimerManager: ObservableObject {
     @Published var secondsElapsed: Int = 0
+    @Published var sessionLength: Int = 0
+    
     var timer: Timer = Timer()
     
     func start() {
@@ -17,7 +19,6 @@ class TimerManager: ObservableObject {
             if self.secondsElapsed > 0 {
                 self.secondsElapsed -= 1
                 if self.secondsElapsed == 0 {
-                    print("Timer Reached 0")
                     self.timer.invalidate()
                 }
             }
@@ -30,8 +31,8 @@ class TimerManager: ObservableObject {
     }
     
     func pause() {
-            timer.invalidate()
-        }
+        timer.invalidate()
+    }
 }
 
 
