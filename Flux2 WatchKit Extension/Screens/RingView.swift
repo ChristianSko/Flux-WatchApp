@@ -113,7 +113,7 @@ struct RingView: View {
                     .fill(self.backgroundColor)
                     .opacity(0.1)
                 // Foreground
-                RingShape(percent: self.percent, startAngle: self.startAngle)
+                RingShape(percent: achievedTime/objectiveTime, startAngle: self.startAngle)
                     .stroke(style: StrokeStyle(lineWidth: self.ringWidth, lineCap: .round))
                     .fill(self.ringGradient)
                 // End of ring with drop shadow
@@ -131,17 +131,17 @@ struct RingView: View {
                 
                 VStack{
                     
-                    Text("\(Int(achievedTime/objectiveTime))%")
+                    Text("\(achievedTime/objectiveTime, specifier: "%.2f")%")
                         .font(.system(.body,design: .rounded))
                         .fontWeight(.light)
                     
                     
-                    Text("Focus")
+                    Text("Focus achieved")
                         .font(.system(.body,design: .rounded))
                         .fontWeight(.bold)
                         .foregroundColor(Color.brandPrimary)
         
-                    Text("\(Int(achievedTime))/\(Int(objectiveTime))Min")
+                    Text("\(Int(achievedTime)) of \(Int(objectiveTime))Min")
                         .font(.system(.body,design: .rounded))
                         .fontWeight(.light)
                 }

@@ -39,9 +39,9 @@ struct TimerView: View {
             
             Button(action: {
                 self.session = 0
-                self.mode.wrappedValue.dismiss()
                 timerViewModel.timer.invalidate()
                 NotificationManager.shared.removeScheduledNotification()
+                self.mode.wrappedValue.dismiss()
                 
             }) {
                 ButtonTextStyle(title: "Stop")
@@ -59,13 +59,10 @@ struct TimerView: View {
             
             NotificationManager.shared.NotifyWhenFinished(timeInterval: session)
             NotificationManager.shared.registerCategories()
-            
-            if self.timerViewModel.secondsElapsed == 0 {
-                self.mode.wrappedValue.dismiss()
-            }})
-        
+            })
         .onReceive(timerViewModel.$secondsElapsed) { _ in
             print(timerViewModel.secondsElapsed)
+            print(timerViewModel.sessionLength)
         }
         
         .onReceive(NotificationCenter.default.publisher(
@@ -96,6 +93,8 @@ struct TimerView: View {
         if timerViewModel.secondsElapsed < 0 {
             timerViewModel.secondsElapsed = 0
             timerViewModel.stop()
+            self.focusedTime += Double(timerViewModel.sessionLength)
+            self.mode.wrappedValue.dismiss()
         } else {
             timerViewModel.start()
         }
