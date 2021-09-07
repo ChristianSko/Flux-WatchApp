@@ -26,10 +26,10 @@ struct SessioView: View {
                     VStack{
                         ForEach(0..<3) { number in
                             NavigationLink(destination: TimerView(totalCyles: Int(pow(cycles, Double(number))), session: sessionTypes[sessions] * 60, completedSessionTime: sessionTypes[sessions])) {
-                                SessionButton(sessionCycles: Int(pow(cycles, Double(number))), sessionTime: sessionTypes[sessions], timeType: "Min")
+                                SessionButton(sessionCycles: Int(pow(cycles, Double(number))), sessionTime: sessionTypes[sessions], timeType: "min")
                             }
                             .background(Color.black)
-                            .frame(width: 68, height: 68, alignment: .center)
+                            .frame(width: 74, height: 74, alignment: .center)
                             .cornerRadius(50)
                             .overlay(Circle()
                             .strokeBorder(style: StrokeStyle(lineWidth: 4,dash: [2])))
@@ -102,7 +102,7 @@ struct SessionButton: View {
                     .padding(.bottom, -7.0)
                 
                 Text("\(sessionTime)")
-                    .font(.system(size: 28, design: .rounded))
+                    .font(.system(size: 24, design: .rounded))
                     .fontWeight(.semibold)
                     .foregroundColor(Color.brandPrimary)
                     .frame(width: 85, height: 30, alignment: .center)
@@ -111,7 +111,7 @@ struct SessionButton: View {
                 Text(timeType)
                     .fontWeight(.light)
                     .foregroundColor(Color.white)
-                    .padding(.top, -13.0)
+                    .padding(.top, -10.0)
             }
         }
     }
