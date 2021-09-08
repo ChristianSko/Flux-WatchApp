@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SessioView: View {
+struct SessionView: View {
     @State var sessionMinutes = 25
     @State var cycles: Double = 2
     
@@ -83,7 +83,7 @@ struct SessioView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SessioView(sessionMinutes: 1, cycles: 2, showSetGoalView: false)
+        SessionView(sessionMinutes: 1, cycles: 2, showSetGoalView: false)
     }
 }
 

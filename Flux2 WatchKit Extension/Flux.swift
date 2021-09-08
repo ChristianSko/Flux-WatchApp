@@ -18,7 +18,7 @@ struct Flux: App {
         WindowGroup {
             NavigationView {
                 TabView{
-                    SessioView()
+                    SessionView()
                     RingView(ringWidth: 15, percent: 15, backgroundColor: Color.brandPrimary, foregroundColors: [.white, Color.brandPrimary])
                 }
             }
