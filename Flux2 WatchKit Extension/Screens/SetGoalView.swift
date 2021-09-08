@@ -12,6 +12,10 @@ struct SetGoalView: View {
     @State var goalTime = UserDefaults.standard.double(forKey: UserdefaultKeys.goal)
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    // Need to verify this works
+//    @AppStorage(UserdefaultKeys.passedOnboarding) var onBoardingPassed = UserDefaults.standard.bool(forKey: UserdefaultKeys.passedOnboarding)
+    @State var onBoardingPassed = false
+    
     var body: some View {
         VStack(spacing: 25){
 
@@ -72,7 +76,7 @@ struct SetGoalView: View {
                 self.mode.wrappedValue.dismiss()
                 
             }) {
-            ButtonTextStyle(title: "Update")
+                ButtonTextStyle(title: onBoardingPassed ? "Update" : "Save")
             }
             .background(Color.brandPrimary)
             .cornerRadius(50)

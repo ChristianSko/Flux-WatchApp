@@ -24,7 +24,7 @@
 		D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F7988256F15ED00B6C15B /* TimerView.swift */; };
 		D61CAFD6265EEE700017B72E /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CAFD5265EEE700017B72E /* PickerView.swift */; };
 		D6603C8626E80BD2005AB1E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6603C8826E80BD2005AB1E5 /* Localizable.strings */; };
-		D6603C8D26E964FB005AB1E5 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6603C8C26E964FB005AB1E5 /* OnBoardingView.swift */; };
+		D6603C8D26E964FB005AB1E5 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6603C8C26E964FB005AB1E5 /* Onboarding.swift */; };
 		D690404B257E4DC1008B0C77 /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690404A257E4DC1008B0C77 /* SetGoalView.swift */; };
 		D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */; };
 		D6950D80259CE03000CA1307 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6950D7F259CE03000CA1307 /* RingView.swift */; };
@@ -100,7 +100,7 @@
 		D6603C8726E80BD2005AB1E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6603C8926E80C5D005AB1E5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D6603C8B26E80E58005AB1E5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D6603C8C26E964FB005AB1E5 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		D6603C8C26E964FB005AB1E5 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		D690404A257E4DC1008B0C77 /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
 		D6950D72259CAFB400CA1307 /* ButtonTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextStyle.swift; sourceTree = "<group>"; };
 		D6950D7F259CE03000CA1307 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		D607DC9D264DCB4F00DA87AD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D6603C8C26E964FB005AB1E5 /* OnBoardingView.swift */,
+				D6603C8C26E964FB005AB1E5 /* Onboarding.swift */,
 				D60F796D256F14DD00B6C15B /* NotificationView.swift */,
 				D60F7969256F14DD00B6C15B /* SessionView.swift */,
 				D60F7988256F15ED00B6C15B /* TimerView.swift */,
@@ -383,7 +383,7 @@
 				D60F7989256F15ED00B6C15B /* TimerView.swift in Sources */,
 				D6C583EC2651C81500B63B5A /* TimerManager.swift in Sources */,
 				D60F796C256F14DD00B6C15B /* NotificationController.swift in Sources */,
-				D6603C8D26E964FB005AB1E5 /* OnBoardingView.swift in Sources */,
+				D6603C8D26E964FB005AB1E5 /* Onboarding.swift in Sources */,
 				D6950D73259CAFB400CA1307 /* ButtonTextStyle.swift in Sources */,
 				D6950D80259CE03000CA1307 /* RingView.swift in Sources */,
 				D60F796A256F14DD00B6C15B /* SessionView.swift in Sources */,

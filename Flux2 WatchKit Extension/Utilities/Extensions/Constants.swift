@@ -10,6 +10,7 @@ import SwiftUI
 enum UserdefaultKeys {
     static let goal     = "Goal"
     static let focused  = "Focused"
+    static let passedOnboarding = "Onboarding"
 }
 
 enum SFSymbols {
