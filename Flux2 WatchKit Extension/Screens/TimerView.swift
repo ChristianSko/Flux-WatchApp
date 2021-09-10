@@ -13,7 +13,7 @@ struct TimerView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     @State var currentCycle = 1
-    @State var totalCyles: Int
+    @State var totalCycles: Int
     @State var session: Int
     @State var completedSessionTime: Int
     
@@ -27,7 +27,7 @@ struct TimerView: View {
         VStack{
             Spacer()
             
-            Text("Session \(currentCycle) out of \(totalCyles)")
+            Text("Session \(currentCycle) out of \(totalCycles)")
             
             
             Text("\(timeToString2(time: TimeInterval(timerViewModel.secondsElapsed)))")
@@ -104,6 +104,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(totalCyles: 1, session: 20, completedSessionTime: 25)
+        TimerView(totalCycles: 1, session: 20, completedSessionTime: 25)
     }
 }

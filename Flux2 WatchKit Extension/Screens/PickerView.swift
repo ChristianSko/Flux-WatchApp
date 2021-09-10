@@ -38,7 +38,7 @@ struct PickerView: View {
             .cornerRadius(20)
             .padding(.vertical, 4)
             .sheet(isPresented: $startTimerView, content: {
-                TimerView(totalCyles: selectedCycle, session: selectedMinutesAmount * 60, completedSessionTime: selectedMinutesAmount)
+                TimerView(totalCycles: selectedCycle, session: selectedMinutesAmount * 60, completedSessionTime: selectedMinutesAmount)
             })
             
 
