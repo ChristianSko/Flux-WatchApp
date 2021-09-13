@@ -38,7 +38,6 @@ struct TimerView: View {
             Spacer()
             
             Button(action: {
-                self.session = 0
                 timerViewModel.timer.invalidate()
                 NotificationManager.shared.removeScheduledNotification()
                 self.mode.wrappedValue.dismiss()

@@ -16,7 +16,7 @@ struct SessionView: View {
     @State var showPickerView = false
     @State var showWeeklySummary = false
     
-    let sessionTypes = [1, 45]
+    let sessionTypes = [25, 45]
     let myButtonCornerRadius: CGFloat = 13
     
     var body: some View {

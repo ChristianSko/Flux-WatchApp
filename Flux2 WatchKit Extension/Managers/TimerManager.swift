@@ -11,6 +11,10 @@ import UserNotifications
 class TimerManager: ObservableObject {
     @Published var secondsElapsed: Int = 0
     @Published var sessionLength: Int = 0
+    @Published var currentSession: Int = 0
+    @Published var totalSessions: Int = 1
+    
+    
     
     var timer: Timer = Timer()
     
